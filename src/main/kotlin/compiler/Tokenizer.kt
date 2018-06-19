@@ -7,7 +7,7 @@ import kotlin.collections.ArrayList
 
 class Tokenizer {
 
-    private var tokens = ArrayList<Token>()
+    private var tokens = Stack<Token>()
     private var lastChar = ' '
 
     private val singleCharTokens = Arrays.asList('(', ')', '{', '}', '*', '/', '<', '>', ';', '=', '-', '+', '~', ',')
@@ -82,8 +82,8 @@ class Tokenizer {
         }
     }
 
-    fun tokenize(str: String): ArrayList<Token> {
-        tokens = ArrayList()
+    fun tokenize(str: String): Stack<Token> {
+        tokens = Stack()
         val strItr = str.toList().listIterator()
 
 

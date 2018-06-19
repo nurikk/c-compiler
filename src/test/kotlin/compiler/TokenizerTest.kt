@@ -100,7 +100,6 @@ class TokenizerTest {
                     return 0;
                 }
         """.trimIndent()
-        System.out.printf("factorialCode %s", factorialCode)
         assertEquals("Keyword int\n" +
                 "Identifier main\n" +
                 "Token (\n" +
